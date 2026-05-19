@@ -259,20 +259,20 @@ def cmd_start(msg):
         return
 
     if msg.from_user.id == ALLOWED_USER:
-        bot.reply_to(msg, f"""
-🎌 *AnimeVerse Bot v3*
-━━━━━━━━━━━━━━━━━━━━━━━━━
-👤 Admin: `{ALLOWED_USER}`
-🤖 Bot: @{BOT_USERNAME}
-━━━━━━━━━━━━━━━━━━━━━━━━━
-📌 *Commands:*
-`/setup anime-id S1` — Season shuru
-`/done` — Sab process karo
-`/status` — Buffer dekho
-`/check anime-id S1 5` — Firebase check
-`/delete anime-id S1 5` — Episode delete
-`/reset` — Sab clear
-""", parse_mode="Markdown")
+        bot.reply_to(msg, (
+            "🎌 AnimeVerse Bot v3\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"Admin ID: {ALLOWED_USER}\n"
+            f"Bot: @{BOT_USERNAME}\n"
+            "━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            "Commands:\n"
+            "/setup anime-id S1 — Season shuru\n"
+            "/done — Sab process karo\n"
+            "/status — Buffer dekho\n"
+            "/check anime-id S1 5 — Firebase check\n"
+            "/delete anime-id S1 5 — Episode delete\n"
+            "/reset — Sab clear"
+        ))
     else:
         bot.reply_to(msg, "🎌 *AnimeVerse* me aapka swagat hai!", parse_mode="Markdown")
 
