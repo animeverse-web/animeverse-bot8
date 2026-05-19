@@ -16,7 +16,7 @@ from flask import Flask
 #   SETTINGS
 # ══════════════════════════════════════════════════════
 
-BOT_TOKEN        = os.environ.get("BOT_TOKEN", "8945923349:AAH_WARTUVpaFmEznK_xNy-nHplzWqTeXGs")
+BOT_TOKEN        = os.environ.get("BOT_TOKEN", "")
 BOT_USERNAME     = "D0file_Bot"
 ALLOWED_USER     = 7373324949
 STORAGE_CHANNEL  = -1003963251495
